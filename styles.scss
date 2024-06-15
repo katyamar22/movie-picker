@@ -1,0 +1,140 @@
+$primary-color: black;
+$secondary-color: #5f5f5f;
+$third-color: #d1d0d0;
+$fourth-color: #891e1e;
+$font-family: "Marcellus", serif;
+* {
+    box-sizing: border-box;
+
+    .marcellus-regular {
+        font-family: "Marcellus", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: whitesmoke;
+
+    h1 {
+        color: $fourth-color;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+
+    h4 {
+        color: $secondary-color;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    #movie-search {
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid $third-color;
+        width: 20rem;
+        border-radius: 20px;
+    }
+
+    #search-button {
+        padding: 10px;
+        background-color: $fourth-color;
+        color: white;
+        font-size: 0.8em;
+        border: none;
+        cursor: pointer;
+        border-radius: 10%;
+    }
+
+    #search-button:hover {
+        cursor: pointer;
+        background-color: #e0baba;
+        color: $fourth-color;
+        border: 1px solid $fourth-color;
+    }
+}
+
+.results-container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 10% auto;
+    background-color: #bebbbb;
+    padding: 2%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+
+    #movie-results {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .movie-card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+
+      .movie-poster {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      
+      .movie-details {
+        margin-top: 10px;
+        color: black;
+        text-align: center;
+      }
+
+      .movie-overview {
+        margin-top: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+}
+
+  
+  /* Movie Details Styling */
+//   .movie-card .movie-details {
+//     display: flex;
+//     flex-direction: column;
+//   }
+  
+//   .movie-card .movie-details h3 {
+//     margin: 10px 0 5px 0;
+//     font-weight: bold;
+//   }
+  
+//   .movie-card .movie-details p {
+//     margin-bottom: 5px;
+//     font-size: 0.9em;
+//   }
